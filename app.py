@@ -3,6 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 
+import streamlit as st
+st.set_page_config(page_title="AI Analyst", layout="wide")
+
+
 # App Title
 st.title("Google Search Console Data Analysis")
 
