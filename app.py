@@ -34,11 +34,7 @@ if uploaded_file:
     top_keywords = data[['Query', 'Clicks']].sort_values(by='Clicks', ascending=False).head(10)
     st.bar_chart(top_keywords.set_index('Query'))
 
-    # CTR vs Position Scatter Plot
-    st.subheader("CTR vs Position")
-    fig = px.scatter(data, x="Position", y="CTR", size="Impressions", color="Query",
-                     title="CTR vs Average Position", labels={"CTR": "Click-Through Rate (%)"})
-    st.plotly_chart(fig)
+    
 
     # Recommendations
     st.subheader("Recommendations")
